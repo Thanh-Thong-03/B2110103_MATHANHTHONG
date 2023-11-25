@@ -8,17 +8,6 @@ const usersSchema = new Schema(
     email: { type: String},
     diachi: { type: String},
     phone: { type: String},
-    cart: {
-      products: [
-        {
-          product: {
-            type: Schema.Types.ObjectId,
-            ref: "product",
-          },
-          soluong: Number,
-        },
-      ],
-    },
   },
   { collection: "user" }
 );
