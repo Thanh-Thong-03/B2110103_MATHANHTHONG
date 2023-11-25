@@ -16,12 +16,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 const ProductRouter = require("./app/routes/product.route");
 const UserRouter = require('./app/routes/user.route');
 const OrderRouter = require('./app/routes/order.route');
-const StaffRouter = require('./app/routes/staff.route');
 
 app.use("/product",ProductRouter);
 app.use("/user",UserRouter);
 app.use("/order",OrderRouter);
-app.use("/staff",StaffRouter);
 
 app.use((req,res,next) => {
     return next(new ApiError(404,"Resource not found"));
